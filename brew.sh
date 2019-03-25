@@ -8,6 +8,9 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+# ZSH
+brew install zsh
+
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
 
