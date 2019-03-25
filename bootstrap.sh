@@ -12,6 +12,12 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		--exclude "backup/" \
+		--exclude ".*~" \
+		--exclude "*~" \
+		--exclude "init/" \
+		--exclude "bin/" \
+		--exclude "brew.sh" \
+		--exclude "install_brew.sh" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
