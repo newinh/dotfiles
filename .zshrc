@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/hoon/.oh-my-zsh
+export ZSH=/Users/sinseunghun/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -16,7 +16,6 @@ ZSH_THEME="robbyrussell"
 # looking in ~/.oh-my-zsh/themes/
 # An empty array have no effect
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -66,9 +65,10 @@ plugins=(
   docker-compose
   docker-machine
   dotenv
-  aws
+#  aws
   python
   pip
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -101,17 +101,34 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 # export PATH="/usr/local/sbin:$PATH"
 # export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
 # alias python='python3'
 
 # pipenv
 export PIPENV_VENV_IN_PROJECT=true
+export PIPENV_IGNORE_VIRTUALENVS=1
 
-# zsh-syntax-hightliting
+# zsh-sytax-highliting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# export PYENV_ROOT=/usr/local/var/pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+
+# tmux
+alias tm='tmux'
+export TERM=xterm-256color
+
+if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+fi
+
+# Docker
+alias dk='docker'
+alias dkrm='docker rm'
+alias dkp='docker ps'
+alias dkl='docker logs'
+alias dklf='docker logs -f'

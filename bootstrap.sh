@@ -18,6 +18,7 @@ function doIt() {
 		--exclude "bin/" \
 		--exclude "brew.sh" \
 		--exclude "install_brew.sh" \
+		--exclude ".gitconfig" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }

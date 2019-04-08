@@ -105,3 +105,17 @@ set nu
 set smartindent
 set tabstop=4
 set shiftwidth=4 
+
+" 상태표시줄에 커서의 위치 표시
+set ruler
+
+set nu
+
+" 현재 커서가 놓여진 괄호의 짝을 표시하기
+set hlsearch
+
+" 현재 커서가 놓여진 괄호의 짝을 표시하기
+set showmatch
+
+" Enable the use of the mouse.
+set mouse=a
