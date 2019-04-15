@@ -19,6 +19,7 @@ function doIt() {
 		--exclude "brew.sh" \
 		--exclude "install_brew.sh" \
 		--exclude ".gitconfig" \
+		--exclude ".om.googlecode.item2.plist" \
 		-avh --no-perms . ~;
 	source ~/.bash_profile;
 }
