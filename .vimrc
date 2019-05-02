@@ -24,7 +24,8 @@ set backspace=indent,eol,start
 if has("vms")
   set nobackup		" do not keep a backup file, use versions instead
 else
-  set backup		" keep a backup file (restore to previous version)
+  :
+"  set backup		" keep a backup file (restore to previous version)
 "  set undofile		" keep an undo file (undo changes after closing)
 endif
 set history=50		" keep 50 lines of command line history
@@ -122,3 +123,7 @@ set mouse=a
 
 " undofile option
 :set noundofile
+
+" backup file option
+set nobackup
+set nowritebackup
