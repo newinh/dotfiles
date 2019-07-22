@@ -68,7 +68,7 @@ plugins=(
 #  aws
   python
   pip
-  zsh-autosuggestions
+#  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -137,3 +137,10 @@ alias dklf='docker logs -f'
 # export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+# auth suggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# syntax hightlightinh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
