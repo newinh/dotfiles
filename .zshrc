@@ -113,6 +113,9 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 # zsh-sytax-highliting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# auth suggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
@@ -138,9 +141,3 @@ alias dklf='docker logs -f'
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-
-# auth suggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# syntax hightlightinh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
