@@ -64,7 +64,7 @@ plugins=(
   docker
   docker-compose
   docker-machine
-  dotenv
+#  dotenv
 #  aws
   python
   pip
