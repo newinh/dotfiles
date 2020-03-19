@@ -143,3 +143,8 @@ export NVM_DIR="$HOME/.nvm"
 
 # lazygit
 alias lg='lazygit'
+
+# kubectl
+alias k=kubectl
+complete -F __start_kubectl k
+if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
