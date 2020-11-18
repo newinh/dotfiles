@@ -73,6 +73,12 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# zsh-sytax-highliting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# auth suggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -110,11 +116,6 @@ source $ZSH/oh-my-zsh.sh
 export PIPENV_VENV_IN_PROJECT=true
 export PIPENV_IGNORE_VIRTUALENVS=1
 
-# zsh-sytax-highliting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# auth suggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
@@ -131,10 +132,6 @@ fi
 
 # Docker
 alias dk='docker'
-alias dkrm='docker rm'
-alias dkp='docker ps'
-alias dkl='docker logs'
-alias dklf='docker logs -f'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -151,5 +148,4 @@ if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOPATH=$(go env GOPATH)
-
 
