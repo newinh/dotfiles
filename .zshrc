@@ -69,6 +69,7 @@ plugins=(
   python
   pip
 #  zsh-autosuggestions
+  golang
 )
 
 source $ZSH/oh-my-zsh.sh
