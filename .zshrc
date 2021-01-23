@@ -60,13 +60,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  osx
+#  gitfast
   docker
-  docker-compose
-  docker-machine
 #  dotenv
-#  aws
-  python
   pip
 #  zsh-autosuggestions
   golang
