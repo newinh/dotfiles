@@ -64,17 +64,13 @@ plugins=(
   docker
 #  dotenv
   pip
-#  zsh-autosuggestions
+#  poetry
   golang
+  zsh-autosuggestions
+  zsh-syntax-highlighting # must be the last plugin sourced.
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# zsh-sytax-highliting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# auth suggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
@@ -105,10 +101,6 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# export PATH="/usr/local/sbin:$PATH"
-# export PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-# alias python='python3'
-
 # pipenv
 export PIPENV_VENV_IN_PROJECT=true
 export PIPENV_IGNORE_VIRTUALENVS=1
@@ -117,7 +109,6 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 export PYENV_ROOT=/usr/local/var/pyenv
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
 
 # tmux
 alias tm='tmux'
