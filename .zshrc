@@ -137,3 +137,5 @@ if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 # export PATH=$PATH:$(go env GOPATH)/bin
 # export GOPATH=$(go env GOPATH)
 
+
+[[ -s "/Users/shinseunghoon/.gvm/scripts/gvm" ]] && source "/Users/shinseunghoon/.gvm/scripts/gvm"
