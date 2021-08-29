@@ -74,7 +74,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# zsh-autosuggestions
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -137,5 +139,8 @@ if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 # export PATH=$PATH:$(go env GOPATH)/bin
 # export GOPATH=$(go env GOPATH)
 
-
 [[ -s "/Users/shinseunghoon/.gvm/scripts/gvm" ]] && source "/Users/shinseunghoon/.gvm/scripts/gvm"
+
+__git_files () {
+    _wanted files expl 'local files' _files
+}
