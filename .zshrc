@@ -147,4 +147,4 @@ __git_files () {
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-PATH=$PATH:$GOPATH/bin
+PATH=$PATH::$(go env GOPATH)/bin
