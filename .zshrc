@@ -144,3 +144,6 @@ if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
 __git_files () {
     _wanted files expl 'local files' _files
 }
+
+export GOPATH=$HOME/go
+PATH=$PATH:$GOPATH/bin
