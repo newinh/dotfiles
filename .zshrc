@@ -148,3 +148,7 @@ __git_files () {
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 PATH=$PATH::$(go env GOPATH)/bin
+
+# gitignore fucntion
+function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
+
