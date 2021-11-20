@@ -68,6 +68,8 @@ plugins=(
   golang
   zsh-autosuggestions
   zsh-syntax-highlighting # must be the last plugin sourced.
+  kubectl
+#  minikube
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -131,11 +133,6 @@ export NVM_DIR="$HOME/.nvm"
 # lazygit
 alias lg='lazygit'
 
-# kubectl
-alias k=kubectl
-complete -F __start_kubectl k
-if [ /usr/local/bin/kubectl ]; then source <(kubectl completion zsh); fi
-
 # export PATH=$PATH:$(go env GOPATH)/bin
 # export GOPATH=$(go env GOPATH)
 
@@ -152,3 +149,12 @@ PATH=$PATH::$(go env GOPATH)/bin
 # gitignore fucntion
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
+# minikube
+alias kubectl="minikube kubectl --"
+alias m="minikube"
+
+# Tell Docker CLI to talk to minikube's VM
+# eval $(minikube docker-env)
+
+# Save IP to a hostname
+# echo "`minikube ip` docker.local" | sudo tee -a /etc/hosts > /dev/null
