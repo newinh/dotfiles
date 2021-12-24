@@ -131,7 +131,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # lazygit
-alias lg='lazygit'
+# alias lg='lazygit'
 
 # export PATH=$PATH:$(go env GOPATH)/bin
 # export GOPATH=$(go env GOPATH)
@@ -149,12 +149,21 @@ PATH=$PATH::$(go env GOPATH)/bin
 # gitignore fucntion
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
+# kubectl
+alias k=kubectl
+complete -F __start_kubectl k
+
 # minikube
-alias kubectl="minikube kubectl --"
-alias m="minikube"
+# alias kubectl="minikube kubectl --"
+# alias m="minikube"
 
 # Tell Docker CLI to talk to minikube's VM
 # eval $(minikube docker-env)
 
 # Save IP to a hostname
 # echo "`minikube ip` docker.local" | sudo tee -a /etc/hosts > /dev/null
+
+# istio
+# alias ic="istioctl"
+# if [ $HOME/completions/_istioctl ]; then source $HOME/completions/_istioctl; fi
+
