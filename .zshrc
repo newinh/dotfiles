@@ -1,3 +1,8 @@
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.poetry/bin:$PATH
 
@@ -109,11 +114,14 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=true
 export PIPENV_VENV_IN_PROJECT=true
 export PIPENV_IGNORE_VIRTUALENVS=1
 
-
+# pyenv
 export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 # tmux
 alias tm='tmux'
 export TERM=xterm-256color
@@ -166,4 +174,14 @@ complete -F __start_kubectl k
 # istio
 # alias ic="istioctl"
 # if [ $HOME/completions/_istioctl ]; then source $HOME/completions/_istioctl; fi
+
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####
+
+alias dnsflush="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+alias awsssh="aws ssm start-session --target "
+# alias tunnel='sshuttle --dns -e "ssh -i ~/.ssh/nutella_lab_ec2key.pem" -r ec2-user@lab.qanda.ai 0.0.0.0/0'
+alias tunnel="sshuttle --dns -e \"ssh -i ~/.ssh/nutella_lab_ec2key.pem\" -r ec2-user@search_lab_ssm 0.0.0.0/0"
 

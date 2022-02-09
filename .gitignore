@@ -14,3 +14,7 @@ Thumbs.db
 .Trashes
 
 *~
+
+# jetbrains
+.idea/*
+
