@@ -98,6 +98,10 @@ brew install git-lfs
 brew install tree
 # brew install vbindiff
 # brew install zopfli
+brew install jq
+brew install tmux
+brew install asciinema
+brew install --cask openinterminal
 
 # Remove outdated versions from the cellar.
 brew cleanup
