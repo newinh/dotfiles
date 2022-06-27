@@ -1,10 +1,7 @@
-
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-#### END FIG ENV VARIABLES ####
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.poetry/bin:$PATH
+export PATH=$HOME/bin:/usr/local/go/bin:/usr/local/bin:$HOME/.poetry/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=${HOME}/.oh-my-zsh
@@ -141,8 +138,6 @@ export NVM_DIR="$HOME/.nvm"
 # lazygit
 # alias lg='lazygit'
 
-# export PATH=$PATH:$(go env GOPATH)/bin
-# export GOPATH=$(go env GOPATH)
 
 [[ -s "/Users/shinseunghoon/.gvm/scripts/gvm" ]] && source "/Users/shinseunghoon/.gvm/scripts/gvm"
 
@@ -152,7 +147,7 @@ __git_files () {
 
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-PATH=$PATH::$(go env GOPATH)/bin
+PATH=$PATH:$(go env GOPATH)/bin
 
 # gitignore fucntion
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
@@ -175,13 +170,21 @@ complete -F __start_kubectl k
 # alias ic="istioctl"
 # if [ $HOME/completions/_istioctl ]; then source $HOME/completions/_istioctl; fi
 
-#### FIG ENV VARIABLES ####
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-#### END FIG ENV VARIABLES ####
 
 alias dnsflush="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias awsssh="aws ssm start-session --target "
 # alias tunnel='sshuttle --dns -e "ssh -i ~/.ssh/nutella_lab_ec2key.pem" -r ec2-user@lab.qanda.ai 0.0.0.0/0'
 alias tunnel="sshuttle --dns -e \"ssh -i ~/.ssh/nutella_lab_ec2key.pem\" -r ec2-user@search_lab_ssm 0.0.0.0/0"
+
+# helm
+alias h="helm"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/solshin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/solshin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/solshin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/solshin/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
 

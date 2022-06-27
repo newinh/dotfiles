@@ -103,5 +103,8 @@ brew install tmux
 brew install asciinema
 brew install --cask openinterminal
 
+brew install kubectx
+brew install git-delta
+
 # Remove outdated versions from the cellar.
 brew cleanup
