@@ -1,5 +1,6 @@
 # Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
+# . "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/go/bin:/usr/local/bin:$HOME/.poetry/bin:$PATH
 
@@ -156,6 +157,9 @@ function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;
 alias k=kubectl
 complete -F __start_kubectl k
 
+# kubectx
+alias kctx=kubectx
+
 # minikube
 # alias kubectl="minikube kubectl --"
 # alias m="minikube"
@@ -186,5 +190,5 @@ if [ -f '/Users/solshin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/solshin
 if [ -f '/Users/solshin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/solshin/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
+# . "$HOME/.fig/shell/zshrc.post.zsh"
 
