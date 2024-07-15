@@ -113,13 +113,10 @@ export PIPENV_VENV_IN_PROJECT=true
 export PIPENV_IGNORE_VIRTUALENVS=1
 
 # pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+# export PYENV_ROOT=/usr/local/var/pyenv
+# if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
+# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 # tmux
 alias tm='tmux'
 export TERM=xterm-256color
@@ -132,15 +129,15 @@ fi
 alias dk='docker'
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [  -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # lazygit
 # alias lg='lazygit'
 
 
-[[ -s "/Users/shinseunghoon/.gvm/scripts/gvm" ]] && source "/Users/shinseunghoon/.gvm/scripts/gvm"
+# [[ -s "/Users/shinseunghoon/.gvm/scripts/gvm" ]] && source "/Users/shinseunghoon/.gvm/scripts/gvm"
 
 __git_files () {
     _wanted files expl 'local files' _files
