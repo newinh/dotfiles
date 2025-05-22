@@ -64,6 +64,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
 #  gitfast
+  gcloud
   docker
 #  dotenv
   pip
@@ -108,15 +109,6 @@ export ZSH_AUTOSUGGEST_USE_ASYNC=true
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# pipenv
-export PIPENV_VENV_IN_PROJECT=true
-export PIPENV_IGNORE_VIRTUALENVS=1
-
-# pyenv
-# export PYENV_ROOT=/usr/local/var/pyenv
-# if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
-# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
 # tmux
 alias tm='tmux'
 export TERM=xterm-256color
@@ -130,14 +122,14 @@ alias dk='docker'
 
 # nvm
 # export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [  -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [  -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # lazygit
 # alias lg='lazygit'
 
 
-# [[ -s "/Users/shinseunghoon/.gvm/scripts/gvm" ]] && source "/Users/shinseunghoon/.gvm/scripts/gvm"
+[[ -s "/Users/shinseunghoon/.gvm/scripts/gvm" ]] && source "/Users/shinseunghoon/.gvm/scripts/gvm"
 
 __git_files () {
     _wanted files expl 'local files' _files
@@ -147,47 +139,27 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 PATH=$PATH:$(go env GOPATH)/bin
 
-# gitignore fucntion
-function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-
 # kubectl
 alias k=kubectl
 complete -F __start_kubectl k
 
-# kubectx
-alias kctx=kubectx
-
-# minikube
-# alias kubectl="minikube kubectl --"
-# alias m="minikube"
-
-# Tell Docker CLI to talk to minikube's VM
-# eval $(minikube docker-env)
-
-# Save IP to a hostname
-# echo "`minikube ip` docker.local" | sudo tee -a /etc/hosts > /dev/null
-
-# istio
-# alias ic="istioctl"
-# if [ $HOME/completions/_istioctl ]; then source $HOME/completions/_istioctl; fi
-
 
 alias dnsflush="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 alias awsssh="aws ssm start-session --target "
-# alias tunnel='sshuttle --dns -e "ssh -i ~/.ssh/nutella_lab_ec2key.pem" -r ec2-user@lab.qanda.ai 0.0.0.0/0'
-alias tunnel="sshuttle --dns -e \"ssh -i ~/.ssh/nutella_lab_ec2key.pem\" -r ec2-user@search_lab_ssm 0.0.0.0/0"
 
 # helm
 alias h="helm"
 
+
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/solshin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/solshin/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/sol/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sol/Downloads/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/solshin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/solshin/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/Users/sol/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sol/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Fig post block. Keep at the bottom of this file.
-# . "$HOME/.fig/shell/zshrc.post.zsh"
+# Created by `pipx` on 2024-05-23 06:24:30
+export PATH="$PATH:/Users/sol/.local/bin"
 
-eval "$(mise activate zsh)"
+# eval "$(mise activate zsh)"
 
+# export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
