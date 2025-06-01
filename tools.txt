@@ -1,0 +1,7 @@
+homerow
+ice
+raycast
+
+1. oh-my-zsh 직접 설치.
+2. brew 직접 설치 
+3. hm.. 담엔 .zshrc 직접 옮기자

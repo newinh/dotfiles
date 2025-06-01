@@ -9,7 +9,7 @@ brew update
 brew upgrade
 
 # ZSH
-brew install zsh
+# brew install zsh
 
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
@@ -26,7 +26,7 @@ BREW_PREFIX=$(brew --prefix)
 # Install GNU `sed`, overwriting the built-in `sed`.
 # brew install gnu-sed --with-default-names
 # Install Bash 4.
-brew install bash
+# brew install bash
 brew install bash-completion2
 
 # Switch to using brew-installed bash as default shell
@@ -101,7 +101,7 @@ brew install tree
 brew install jq
 brew install tmux
 brew install asciinema
-brew install --cask openinterminal
+# brew install --cask openinterminal
 
 brew install kubectx
 brew install git-delta
