@@ -1,6 +1,12 @@
 homerow
 ice
 raycast
+scroll-reverser
+screen-shot-x
+table-plus
+warp
+orb-stacks
+run-cat
 
 1. oh-my-zsh 직접 설치.
 2. brew 직접 설치 

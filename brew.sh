@@ -105,6 +105,7 @@ brew install asciinema
 
 brew install kubectx
 brew install git-delta
+brew install mise  # package
 
 # Remove outdated versions from the cellar.
 brew cleanup
