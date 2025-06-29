@@ -7,6 +7,7 @@
 	lg = !"git lg1 $(git stash list --format=\"%H\")"
 	ps = push origin $(git_current_branch)
 	pl = pull origin $(git_current_branch)
+	fp = fetch -apP
 
 [core]
 	editor = vim
