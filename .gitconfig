@@ -1,13 +1,18 @@
 [user]
 	name = newinh
 	email = newinh90@gmail.com
+[pull]
+	ff = only
+
 [alias]
 	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
 	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 	lg = !"git lg1 $(git stash list --format=\"%H\")"
 	ps = push origin $(git_current_branch)
-	pl = pull origin $(git_current_branch)
+	pl = "!git pull --rebase origin $(git rev-parse --abbrev-ref HEAD)"
 	fp = fetch -apP
+	p = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+	rbm = rebase --autostash origin/main
 
 [core]
 	editor = vim
@@ -25,4 +30,7 @@
 
 [diff]
     colorMoved = default
+
+
+
 
